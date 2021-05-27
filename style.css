@@ -79,6 +79,11 @@ body {
   border: var(--primary);
   transform: translateY(-3px) scale(1.1);
   transition: ease-in-out;
+  font-size: 0.75rem;
+}
+
+.card:first-child {
+  margin-bottom: 1rem;
 }
 
 /* iPads (portrait) ----------- */
