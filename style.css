@@ -1,0 +1,67 @@
+:root {
+    --primary: #27EBA7;
+    --secondary: #343a40;
+    --accent: #FFFFFF;
+    --transparent: #ffffff0c;
+}
+
+img {
+  border-radius: 10rem;
+  border: var(--accent);
+  width: 7rem;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+body {
+  background: var(--secondary);
+  overflow-x: hidden;
+}
+
+#icons {
+  display: none;
+}
+
+.basicGrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--transparent);
+  font-size: .5em;
+  color: var(--accent);
+  height: 2rem;
+  width: 15rem;
+  border: solid var(--accent);
+  border-radius: 1rem;
+  transition: all 500ms;
+  overflow: hidden;
+  padding: 0.5em;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card:hover {
+  background-color: var(--primary);
+  color: var(--secondary);
+  border: var(--primary);
+  transform: translateY(-3px) scale(1.1);
+  transition: ease-in-out;
+}
