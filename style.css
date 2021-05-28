@@ -25,6 +25,18 @@
   --font-secondary: "Rubik", sans-serif;
 }
 
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--secondary);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+}
+
 h1 {
   color: var(--primary);
   font-family: var(--font-primary);
@@ -96,7 +108,8 @@ svg:hover {
   height: 2rem;
   width: 15rem;
   border: solid var(--accent);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
+  border-width: 0.17rem;
   transition: all 500ms;
   overflow: hidden;
   padding: 0.5em;
@@ -109,18 +122,16 @@ svg:hover {
 .card:hover {
   background-color: var(--primary);
   color: var(--secondary);
-  border: var(--primary);
-  transform: translateY(-3px) scale(1.1);
   transition: ease-in-out;
-  font-size: 0.75rem;
 }
 
+/* Gives featured link some breathing room */
 .card:first-child {
   margin-bottom: 1rem;
 }
 
 /* iPads (portrait) ----------- */
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px) {
   .card {
     height: 2.5rem;
     width: 20rem;
