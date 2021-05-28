@@ -1,9 +1,28 @@
+/*
+:root explained <<<<<<<<<<<<<
+  --primary - the color of the heading as well as the hover
+     color change on link buttons and icons
+
+  --secondary - the background color and the link button hover
+    text color
+
+  --accent - the color of: link button outline, link button text,
+      and icons
+
+  --transparent - background color of link buttons
+
+  --font-primary - font used for heading
+
+  --font-secondary - font used for link buttons
+*/
+
 :root {
   --primary: #27eba7;
   --secondary: #0e111f;
   --accent: #ffffff;
   --transparent: #ffffff0c;
   --font-primary: "Rubik", sans-serif;
+  --font-secondary: "Rubik", sans-serif;
 }
 
 h1 {
