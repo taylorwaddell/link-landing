@@ -22,10 +22,10 @@ from the icons you would like to make visible. Then, paste your link into the co
 ## Problems Faced
 -- check back later --
 
-Resources:
-[Fill Murray](http://www.fillmurray.com/)
-[Box Icons](https://boxicons.com/)
-[The best coding youtube channel (Fireship)](https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA)
-[Flex Box Cheat Sheet](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+## Resources:
+- [Fill Murray](http://www.fillmurray.com/)
+- [Box Icons](https://boxicons.com/)
+- [The best coding youtube channel (Fireship)](https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA)
+- [Flex Box Cheat Sheet](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 -- In the near future I will add screenshots --
