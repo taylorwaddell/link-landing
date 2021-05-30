@@ -4,6 +4,8 @@
 I was sick of not being able to show off multiple links in my instagram bio. I was also for sure not going to use a web app that I could recreate in a few hours.
 So I took matters into my own hands and threw together a link tree copy. The goal was to make it a template so that others could easily utilize it.
 
+![preview](https://raw.githubusercontent.com/taylorwaddell/link-landing/master/preview.gif)
+
 ## HOW TO USE:
 If you simply want to see what it looks like, the mock deployment is available [here](https://link-landing-q5ba98cqg-taylorwaddell.vercel.app/) and in the sidebar via Vercel.
   
@@ -27,5 +29,3 @@ from the icons you would like to make visible. Then, paste your link into the co
 - [Box Icons](https://boxicons.com/)
 - [The best coding youtube channel (Fireship)](https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA)
 - [Flex Box Cheat Sheet](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-
--- In the near future I will add screenshots --
