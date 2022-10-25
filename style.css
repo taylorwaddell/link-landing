@@ -17,12 +17,25 @@
 */
 
 :root {
-  --primary: #27eba7;
-  --secondary: #0e111f;
-  --accent: #ffffff;
+  /* --primary: #27eba7; */
+  --primary: #717875;
+  /* --secondary: #0e111f; */
+  --secondary: #dcdddd;
+  /* --accent: #FFF; */
+  --accent: #b0b0b0;
   --transparent: #ffffff0c;
   --font-primary: "Rubik", sans-serif;
   --font-secondary: "Rubik", sans-serif;
+
+  /* Gradient Colors (used for prism effect) */
+  --gradient-purple-light: rgb(255, 10, 180);
+  --gradient-purple-dark: rgb(145, 18, 132);
+  --gradient-blue-light: rgb(96, 109, 245);
+  --gradient-blue-dark: rgb(58, 121, 159);
+  --gradient-yellow-light: rgb(234, 228, 140);
+  --gradient-yellow-dark: rgb(215, 217, 125);
+  --gradient-orange-light: rgb(254, 161, 73);
+  --gradient-orange-dark: rgb(179, 79, 37);
 }
 
 body::-webkit-scrollbar {
@@ -38,9 +51,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 h1 {
-  color: var(--primary);
+  color: var(--accent);
   font-family: var(--font-primary);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 img {
@@ -108,21 +121,81 @@ svg:hover {
   height: 2rem;
   width: 15rem;
   border: solid var(--accent);
-  border-radius: 0.5rem;
+  border-radius: 10rem;
   border-width: 0.17rem;
   transition: all 500ms;
   overflow: hidden;
   padding: 0.5em;
-
+  
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .card:hover {
-  background-color: var(--primary);
+  background-color: var(--accent);
   color: var(--secondary);
   transition: ease-in-out;
+}
+
+/* Prism CSS */
+#link1 {
+  position: relative;
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 700;
+  z-index: 10;
+}
+
+.prism {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--accent);
+  overflow: hidden;
+  border-radius: 10rem;
+  margin-bottom: 2rem;
+}
+
+.prism::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(59deg, rgba(204,255,251,1) 4%, rgba(46,226,237,1) 18%, rgba(36,140,180,1) 30%, rgba(236,66,189,1) 39%, rgba(173,56,105,1) 50%, rgba(255,237,78,1) 61%, rgba(247,227,41,1) 66%, rgba(41,247,172,1) 75%, rgba(247,169,41,1) 90%);
+  animation: animate 5s ease-in-out infinite;
+}
+
+.prism::after {
+  content: '';
+  position: absolute;
+  border-radius: 10rem;
+  background: var(--secondary);
+}
+
+.prism:hover {
+  cursor: pointer;
+}
+
+.prism:hover::after {
+background: var(--accent);
+}
+.prism:hover #link1 {
+color: var(--secondary);
+}
+
+.prism:hover::before {
+  animation-play-state: paused;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Gives featured link some breathing room */
@@ -130,11 +203,32 @@ svg:hover {
   margin-bottom: 1rem;
 }
 
+/* Phones (portrait) ----------- */
+@media only screen and (min-width: 300px) {
+  .prism {
+    height: 3.5rem;
+    width: 16.4rem;
+  }
+
+  .prism::after {
+    inset: .15em;
+  }
+}
+
 /* iPads (portrait) ----------- */
 @media only screen and (min-width: 768px) {
   .card {
     height: 2.5rem;
     width: 20rem;
+  }
+
+  .prism {
+    height: 3.75rem;
+    width: 21.25rem;
+  }
+  
+  .prism::after {
+    inset: .15em;
   }
 }
 
@@ -144,4 +238,13 @@ svg:hover {
     height: 3rem;
     width: 25rem;
   }
+  
+    .prism {
+      height: 4.4rem;
+      width: 26.4rem;
+    }
+    
+    .prism::after {
+      inset: .2em;
+    }
 }
